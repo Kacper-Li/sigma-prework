@@ -4,15 +4,16 @@
 # Calculate Difference
 # Output number of years
 
-from datetime import datetime, timedelta, date
+from datetime import date
 
 def age_calculator(date_given: date):
     current_date = date.today()
     difference = current_date - date_given
-    age = difference.days // 365
-    return age
+    years = difference.days // 365
+    days = difference.days % 365
+    return f"{years} years and {days} days"
 
 input_date = input("Enter a date in iso format|YYYY-MM-DD|: ")
 formatted_date = date.fromisoformat(input_date)
-print(formatted_date)
-print(f"{age_calculator(formatted_date)} years since {input_date}")
+time_difference = age_calculator(formatted_date)
+print(f"{time_difference} since {input_date}")
