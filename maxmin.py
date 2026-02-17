@@ -13,4 +13,6 @@ test2 = [20, 50, 12, 6, 14, 8]
 test3 = [100, -100]
 
 def test_value(input, correct_answer):
-    
+    calculated_answer = min_and_max(input)
+    correct = (calculated_answer == correct_answer)
+    print(f"Correct: {correct}, Expected: {correct_answer}, Gotten: {calculated_answer}")
