@@ -1,7 +1,7 @@
 def test_value(input, correct_answer):
     calculated_answer = min_and_max(input)
     correct = (calculated_answer == correct_answer)
-    print(f"Correct:  {correct}")
+    print(f"Correct:  {correct}, Input: {input}")
     print(f"Expected: {correct_answer}")
     print(f"Gotten:   {calculated_answer}")
 
