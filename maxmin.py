@@ -1,3 +1,4 @@
+# Unnecessary function just to test answers
 def test_value(input, correct_answer):
     calculated_answer = min_and_max(input)
     correct = (calculated_answer == correct_answer)
@@ -6,15 +7,16 @@ def test_value(input, correct_answer):
     print(f"Gotten:   {calculated_answer}")
 
 def min_and_max(array):
-    lowest = array[0]
-    highest = array[0]
-    for item in array:
-        if item > highest:
-            highest = item
-        elif item < lowest:
-            lowest = item
-    return [lowest, highest]
+    lowest_value = array[0]
+    highest_value = array[0]
+    for number in array:
+        if number > highest_value:
+            highest_value = number
+        elif number < lowest_value:
+            lowest_value = number
+    return [lowest_value, highest_value]
 
+# placeholders for testing
 test1 = [2, 4, 1, 0, 2, -1]
 answer1 = [-1,4]
 test2 = [20, 50, 12, 6, 14, 8]
